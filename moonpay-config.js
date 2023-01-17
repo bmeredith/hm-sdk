@@ -23,7 +23,7 @@ const wallet = new MoonpayWallet({
     // the domain the sdk is on - which we can read from the window
     loginTarget: window.location.protocol + '//' + window.location.host,
     // partner specific api - this is used to identity the partner on the backend
-    apiKey: '❗️ YOUR KEY ❗️',
+    apiKey: 'pk_test_Ud07L6c0FmoVQuav3IakuCnhgl149ChK',
     // we can listen for the login opening and closing
     onLoginWindowChange: (show) => { console.log('show change', show) },
     // set color of `X` to close login window
