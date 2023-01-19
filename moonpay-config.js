@@ -19,7 +19,7 @@ const wallet = new MoonpayWallet({
   },
   options: {
     // the domain the login widget is on
-    loginDomain: 'https://buy.moonpay.com',
+    loginDomain: 'https://buy-sandbox.moonpay.com',
     // the domain the sdk is on - which we can read from the window
     loginTarget: window.location.protocol + '//' + window.location.host,
     // partner specific api - this is used to identity the partner on the backend
