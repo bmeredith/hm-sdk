@@ -4,7 +4,7 @@ const MoonpayWallet = window.MoonpayWallet
 // init wallet with api key
 const wallet = new MoonpayWallet({
   actions: {
-		// 🆕 update can be removed
+    // 🆕 update can be removed
     resetState: () => {
       // THIS GETS CALLED WHEN WE CALL `wallet.deactivate()`
       console.log('resetState')
@@ -13,7 +13,7 @@ const wallet = new MoonpayWallet({
   },
   options: {
     // the domain the login widget is on
-    loginDomain: 'https://buy.moonpay.com',
+    loginDomain: 'https://buy-sandbox.moonpay.com',
     // the domain the sdk is on - which we can read from the window
     loginTarget: window.location.protocol + '//' + window.location.host,
     // partner specific api - this is used to identity the partner on the backend
@@ -23,8 +23,8 @@ const wallet = new MoonpayWallet({
     // set color of `X` to close login window
     closeButtonColor: '#FFFFFF',
 
-		// 🆕 on a successful login
-		onSuccessfulLogin: (data) => {
+    // 🆕 on a successful login
+    onSuccessfulLogin: (data) => {
       const { walletAddress, firstName, lastName, email } = data
       console.log({ walletAddress, firstName, lastName, email })
       document.getElementById('walletAddress').innerHTML = walletAddress
