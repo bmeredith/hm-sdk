@@ -8,7 +8,6 @@ const wallet = new MoonpayWallet({
     resetState: () => {
       // THIS GETS CALLED WHEN WE CALL `wallet.deactivate()`
       console.log('resetState')
-      document.getElementById('walletAddress').innerHTML = ''
     },
   },
   options: {
@@ -17,7 +16,7 @@ const wallet = new MoonpayWallet({
     // the domain the sdk is on - which we can read from the window
     loginTarget: window.location.protocol + '//' + window.location.host,
     // partner specific api - this is used to identity the partner on the backend
-    apiKey: 'pk_test_Ud07L6c0FmoVQuav3IakuCnhgl149ChK',
+    apiKey: 'pk_live_syf4L2iZ16luwHWgLFWfmTIGTxrWaSqp',
     // we can listen for the login opening and closing
     onLoginWindowChange: (show) => { console.log('show change', show) },
     // set color of `X` to close login window
@@ -27,7 +26,6 @@ const wallet = new MoonpayWallet({
     onSuccessfulLogin: (data) => {
       const { walletAddress, firstName, lastName, email } = data
       console.log({ walletAddress, firstName, lastName, email })
-      document.getElementById('walletAddress').innerHTML = walletAddress
     },
   },
 })
